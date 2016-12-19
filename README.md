@@ -118,9 +118,9 @@ Los filtros comienzan con el prefijo `{filter.}` y permiten acotar los resultado
 | parámetro | colección | opciones | descripción |
 |:----------|:---------:|:--------:|:------------|
 | `filter.type` | _items_ | `{j, b, s}` | identifica el tipo de colección: revistas `{j}`; libros `{b}`; estándares `{s}`. |
-|`filter.openAccess`| _journals_ | `{1}` | filtra por aquellos los títulos de revistas que son solo de acceso abierto. |
-|`filter.resource` | _journals_, _books_ | `{id_del_recurso}` | filtra títulos de una determinada plataforma. |
-|`filter.discipline` | _journals_, _books_ | `{id_de_la_disciplina}` | filtra títulos de una determinada disciplina de acuerdo a la indización de la Biblioteca Electrónica. |
+| `filter.openAccess`| _journals_ | `{1}` | filtra por aquellos los títulos de revistas que son solo de acceso abierto. |
+| `filter.resource` | _journals_, _books_ | `{id_del_recurso}` | filtra títulos de una determinada plataforma. |
+| `filter.discipline` | _journals_, _books_ | `{id_de_la_disciplina}` | filtra títulos de una determinada disciplina de acuerdo a la indización de la Biblioteca Electrónica. |
 
 #####Múltiple filtros
 
@@ -154,4 +154,8 @@ Las listas de referencia sirven para conocer cuáles son los identificadores que
 Para encontrar el identificador de un determinado recurso o disciplina está  disponible el parámetro `{query}` que busca contenido en el nombre.
 
 ####Ejemplo
-<small>Encontrar el `{id}` que coincida con 
+<small>Encontrar el `{id}` que corresponda a la disciplina con el término de búsqueda _mamiferos_. La disciplina en este caso es _mastozoología_ con ID `{MASTOZOOL}`.</small>
+
+```
+http://biblioteca.mincyt.gob.ar/api/disciplines?query=mamiferos
+```
