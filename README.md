@@ -51,7 +51,6 @@ http://biblioteca.mincy.gob.ar/api/{colleción}
 | `/journals` | devuelve una lista de todos los títulos contenidos en el catálogo de revistas. |
 | `/books` | devuelve una lista de todos los títulos contenidos en el catálogo de libros. |
 | `/standards` | devuelve una lista de todos los títulos contenidos en el catálogo de estándares. |
-| `/resources` | devuelve una lista de todos los recursos de información suscriptos y de acceso abierto de la Biblioteca Electrónica. |
 
 #### Ejemplo
 <small>Traer todos los títulos de toda la colección. Los resultados son siempre 20 resultados por página.</small>
@@ -69,8 +68,7 @@ Pueden ser usados de la siguiente manera:
 | `/ìtems?id={identificador}` | devuelve los metadatos de un determinado ítem que coincide con el `{identificador}` que puede ser un `ISSN` (impreso o electrónico) para las revistas, un `ISBN` (impreso o electrónico) para los libros y un `número de identificación` para los estándares. |
 | `/journals?id={issn}` | devuelve información acerca de un determinado título de publicación periódica que coincida con el ISSN (impreso o electrónico). |
 | `/books?id={isbn}` | devuelve información acerca de un determinado título de libro que coincida con el ISBN (impreso o electrónico). |
-| `/standarads/{number}` | devuelve información acerca de un determinado título de estándar que coincida con el número de identificación. |
-| `/resources?id={resource_id}` | devuelve información acerca de un recurso de información. |
+| `/standards/?id={number}` | devuelve información acerca de un determinado título de estándar que coincida con el número de identificación. |
 
 ####Ejemplos
 
@@ -105,7 +103,7 @@ Por el momento solo está disponible la búsqueda por palabras del título. El p
 http://biblioteca.mincyt.gob.ar/api/items?query.title=microbiology
 ```
 
-<small>Encontrar los títulos que contienen los términos _argentin_ (_argentina_, _argentino_, _argentinos_, _argentinas_) y _acta_ (_acta_, _actas_, _abstracta_, etc) en el título:</small>
+<small>Encontrar los títulos que contienen los términos _argentin_ (_argentina_, _argentino_, _argentinos_, _argentinas_) y _acta_ (_acta_, _pactan_, _abstracta_, _fractals_, _retractais_, etc) en el título:</small>
 
 ```
 http://biblioteca.mincyt.gob.ar/api/items?query.title=argentin+acta
@@ -114,7 +112,7 @@ http://biblioteca.mincyt.gob.ar/api/items?query.title=argentin+acta
 
 #### Filtros
 
-Los filtros permiten acotar los resultados, comienzan con el prefijo `{filter.}`. Los siguientes filtros están disponibles:
+Los filtros comienzan con el prefijo `{filter.}` y permiten acotar los resultados de búsqueda. Los siguientes filtros están disponibles:
 
 
 | parámetro | colección | opciones | descripción |
@@ -126,4 +124,34 @@ Los filtros permiten acotar los resultados, comienzan con el prefijo `{filter.}`
 
 #####Múltiple filtros
 
-Pueden combinarse en una única búsqueda y pueden combinarse con los parámetros de búsqueda `{query.}`.
+Pueden combinarse en una única búsqueda y pueden combinarse con los parámetros de búsqueda `{query.}`. Para conocer cuáles son los `{id}` identificadores utilice las [listas de referencias](#listas-de-referencia).
+
+#####Ejemplos
+
+<small>Encontrar títulos de revistas de acceso abierto que contengan el término _physics_ en el título.</small>
+
+```
+http://biblioteca.mincyt.gob.ar/api/journals?filter.openAccess=1&query.title=physics
+```
+
+<small>Encontrar títulos de revistas de la editorial _Wiley_ que sean de _desarrollo sustentable_.</small>
+
+```
+http://biblioteca.mincyt.gob.ar/api/journals?filter.discipline=DESA-SUST&filter.resource=WILEY
+```
+
+##Listas de referencia
+
+Las listas de referencia sirven para conocer cuáles son los identificadores que la Biblioteca Electrónica utiliza para realizar búsquedas y filtros.
+
+| lista | descripción |
+|:------|:------------|
+| `/resources` | devuelve una lista de recursos de información suscritos y de acceso abierto de la Biblioteca Electrónica con su correspondiente identificador. |
+| `/disciplines` | devuelve la lista FoS de la OCDE con las grandes áreas, áreas y subáreas con sus correspondientes identificadores. |
+
+###Búsquedas
+
+Para encontrar el identificador de un determinado recurso o disciplina está  disponible el parámetro `{query}` que busca contenido en el nombre.
+
+####Ejemplo
+<small>Encontrar el `{id}` que coincida con 
