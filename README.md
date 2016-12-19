@@ -66,11 +66,11 @@ Pueden ser usados de la siguiente manera:
 
 | colección | descripción |
 |:--------- |:------------|
-| `/ìtems/{identificador}` | devuelve los metadatos de un determinado ítem que coincide con el `{identificador}` que puede ser un `ISSN` (impreso o electrónico) para las revistas, un `ISBN` (impreso o electrónico) para los libros y un `número de identificación` para los estándares. |
-| `/journals/{issn}` | devuelve información acerca de un determinado título de publicación periódica que coincida con el ISSN (impreso o electrónico). |
-| `/books/{isbn}` | devuelve información acerca de un determinado título de libro que coincida con el ISBN (impreso o electrónico). |
+| `/ìtems?id={identificador}` | devuelve los metadatos de un determinado ítem que coincide con el `{identificador}` que puede ser un `ISSN` (impreso o electrónico) para las revistas, un `ISBN` (impreso o electrónico) para los libros y un `número de identificación` para los estándares. |
+| `/journals?id={issn}` | devuelve información acerca de un determinado título de publicación periódica que coincida con el ISSN (impreso o electrónico). |
+| `/books?id={isbn}` | devuelve información acerca de un determinado título de libro que coincida con el ISBN (impreso o electrónico). |
 | `/standarads/{number}` | devuelve información acerca de un determinado título de estándar que coincida con el número de identificación. |
-| `/resources/{resource_id}` | devuelve información acerca de un recurso de información. |
+| `/resources?id={resource_id}` | devuelve información acerca de un recurso de información. |
 
 ####Ejemplos
 
