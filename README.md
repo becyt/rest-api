@@ -74,27 +74,24 @@ Pueden ser usados de la siguiente manera:
 
 ####Ejemplos
 
-<small>Metadatos de la revista con ISSN 0066-782X (_Arquivos Brasileiros de Cardiologia_):</small>
+<small>Los metadatos de la revista _Arquivos Brasileiros de Cardiologia_, se obtienen tanto con el ISSN impreso como el electrónico:</small>
 ```
-http://biblioteca.mincyt.gob.ar/api/journals/0066-782X
-```
+http://biblioteca.mincyt.gob.ar/api/journals?id=0066-782X
 
-<small>El mismo resultado se obtiene también usando el ISSN 1678-4170:</small>
-```
-http://biblioteca.mincyt.gob.ar/api/journals/1678-4170
+http://biblioteca.mincyt.gob.ar/api/journals?id=1678-4170
 ```
 
 <small>Metadatos correspondientes a *ScienceDirect*:</small>
 
 ```
-http://biblioteca.mincyt.gob.ar/api/resources/SCIENCEDIRECT
+http://biblioteca.mincyt.gob.ar/api/resources?id=SCIENCEDIRECT
 ```
 
 
 ### Parámetros
 #### Búsquedas
 
-Por el momento solo está disponible la búsqueda por palabras del título. El parámetro comienza con el párametro _query_ seguido de un punto (.) y _title_.
+Por el momento solo está disponible la búsqueda por palabras del título. El parámetro comienza con el párametro _query_ seguido de un punto (.) y _title_. Los términos se concatenan uniéndolos a través del operador _más_ (+).
 
 | parámetro | colección | valores | descripción |
 |:----------|:---------:|:-------:|:------------|
@@ -107,6 +104,13 @@ Por el momento solo está disponible la búsqueda por palabras del título. El p
 ```
 http://biblioteca.mincyt.gob.ar/api/items?query.title=microbiology
 ```
+
+<small>Encontrar los títulos que contienen los términos _argentin_ (_argentina_, _argentino_, _argentinos_, _argentinas_) y _acta_ (_acta_, _actas_, _abstracta_, etc) en el título:</small>
+
+```
+http://biblioteca.mincyt.gob.ar/api/items?query.title=argentin+acta
+```
+
 
 #### Filtros
 
@@ -122,4 +126,4 @@ Los filtros permiten acotar los resultados, comienzan con el prefijo `{filter.}`
 
 #####Múltiple filtros
 
-Pueden combinarse en una única búsqueda.
+Pueden combinarse en una única búsqueda y pueden combinarse con los parámetros de búsqueda `{query.}`.
