@@ -137,7 +137,7 @@ http://biblioteca.mincyt.gob.ar/api/journals?filter.openAccess=1&query.title=phy
 <small>Encontrar títulos de revistas de la editorial _Wiley_ que sean de _desarrollo sustentable_.</small>
 
 ```
-http://biblioteca.mincyt.gob.ar/api/journals?filter.discipline=DESA-SUST&filter.resource=WILEY
+http://biblioteca.mincyt.gob.ar/api/journals?filter.discipline=DES-SUS&filter.resource=WILEY
 ```
 
 ##Listas de referencia
