@@ -4,7 +4,7 @@ Documentación para el uso de la API de los catálogos de la Biblioteca Electró
 
 ## Versiones
 
-- v1: 2016-dic. Inicio de la API.
+- v1-beta: 2016-dic. Inicio de la API. Creación y testeo
 
 ## Reportar problemas, sugerencias
 
