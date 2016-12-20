@@ -95,8 +95,8 @@ Metadatos para cada título de una publicación periódica.
 		],
 		"openAccess": "n",
 		"coverSrc": "/images/covers/journals/8757.gif",
-		"subscriptions": [subscription1, subscription2, subscription3, ...],
-		"disciplines": [discipline1, discipline2, ...]
+		"subscriptions": [{subscription1}, {subscription2}, {subscription3}, ...],
+		"disciplines": [{discipline1}, {discipline2}, ...]
 	}
 ]
 ```
