@@ -112,8 +112,8 @@ Metadatos para cada título de una publicación periódica.
 | `{history}` | historia de la revista. Enlista cada uno de los títulos que tienen relación histórica. Se indican detalle del título `{title}` de cada una, así como también la relación `{relationship}`. |
 | `{openAccess}` | informa si la revista es de Accesso Abierto `"y"` o no `"n"`. |
 | `{coverSrc}` | dirección donde se encuentra la imagen de la portada. |
-| `{subscriptions}`| lista de las suscripciones. Ver [subscriptions] |
-| `{disciplines}`| indización de la revista. Lista de las disciplinas temáticas. Ver [disciplines] |
+| `{subscriptions}`| lista de las suscripciones. Ver [subscriptions](#subscriptions) |
+| `{disciplines}`| indización de la revista. Lista de las disciplinas temáticas. Ver [disciplines](#disciplines) |
 
 ##Subscriptions
 
@@ -146,3 +146,29 @@ Información sobre las suscripciones de un título en relación a los diferentes
 | `{url}`| dirección web de acceso al título. |
 | `{stock}` | información acerca de la existencias. `{from}` desde qué volumen/número hasta qué volumen/número `{to}`y desde qué fecha (año-mes-día) `{coverage.from}` hasta qué fecha (año-mes-día) `{coverage.to}`. Si la publicación no tiene cierre,  `{to}` y `{coverage.to}` devuelven {null}. |
 | `{embargo}` | informa si la publicación tiene sus números en embargo o no `"n"`. En caso de tenerlo aparecerán el tipo `{type}` para embargos anuales `"y"` o mensuales `"m"`, junto con la cantidad de años o meses `{value}` que dura el embargo. |
+
+##Disciplines
+
+Información sobre las disciplinas temáticas en la que se encuentra indizada la revista.
+
+```
+"disciplines": [
+	{
+		"id": "HIST",
+		"name": "Historia",
+		"subject": {
+			"id": "HIST",
+			"name": "Historia y arqueología",
+			"major-subject": {
+				"id": "HUM",
+				"name": "Humanidades"
+			}
+		}
+	},...]
+```
+
+| campo | descripción |
+|:------|:------------|
+| `{id}` | identificador de la disciplina. |
+| `{name}` | nombre de la disciplina. |
+| `{subject}` | nombre del área en la que está incluida la disciplina. Contiene identificador `{id}` y nombre `{name}`, y la gran área `{major-subject}` en la que está contenida, a su vez el área, con su correspondiente identificador `{id}` y nombre `{name}`. |
