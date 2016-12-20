@@ -1,8 +1,8 @@
-##becyt-api-format
+#becyt-api-format
 
 Documentación sobre el formato de salida de la API.
 
-###Message
+##Message
 
 Información del estado de la consulta.
 
@@ -28,3 +28,34 @@ Información del estado de la consulta.
 | `{items-count}` | cantidad de ítems devueltos. |
 | `{page}` | número de página en la paginación. |
 | `{items-per-page}` | cantidad de ítems devueltos.  |
+
+##Items
+
+Información que describe cada `{item}`.
+
+```
+"items": [
+			{
+				"title": "#Tear",
+				"item-type": "j",
+				"identifiers": {
+					"type": "ISSN",
+					"print": null,
+					"online": "2238-8079"
+				}
+			},
+	... ]
+```
+
+| campo | descripción |
+|:------|:------------|
+| `{title}` | título de la publicación periódica, libro, etc. |
+| `{item-type}` | tipo de ítem: "j" = revistas; "b" = libros; "s" = estándar. |
+| `{identificadores.type}` | tipo de identificador. "ISSN" para las revistas, "ISBN" para los libros, "number" para los estádares. |
+| `{identificadores.print}` | para las revistas y libros, el identificador de la versión impresa. |
+| `{identificadores.online}` | para las revistas y libros, el identificador de la versión electrónica o en línea. |
+
+##journals
+
+Metadatos para cada título de una publicación periódica.
+
