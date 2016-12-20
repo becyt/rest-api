@@ -112,5 +112,37 @@ Metadatos para cada título de una publicación periódica.
 | `{history}` | historia de la revista. Enlista cada uno de los títulos que tienen relación histórica. Se indican detalle del título `{title}` de cada una, así como también la relación `{relationship}`. |
 | `{openAccess}` | informa si la revista es de Accesso Abierto `"y"` o no `"n"`. |
 | `{coverSrc}` | dirección donde se encuentra la imagen de la portada. |
-| `{subscriptions}`| lista de las suscripciones. |
-| `{disciplines}`| indización de la revista. Lista de las disciplinas temáticas. |
+| `{subscriptions}`| lista de las suscripciones. Ver [subscriptions] |
+| `{disciplines}`| indización de la revista. Lista de las disciplinas temáticas. Ver [disciplines] |
+
+##Subscriptions
+
+Información sobre las suscripciones de un título en relación a los diferentes recursos de información suscriptos.
+
+```
+"resource": 
+{
+	"id": "ACM",
+	"name": "ACM Digital Library",
+	"collection": null,
+	"url": "http://dl.acm.org/pub.cfm?id=J954",
+	"stock": {
+		"from": "1(1)",
+		"to": null,
+		"coverage": {
+			"from": "2004-01-01",
+			"to": null
+		},
+		"embargo": "n"
+	},
+}
+```
+
+| campo | descripción |
+|:------|:------------|
+| `{id}` | identificador del recurso. |
+| `{name}` | nombre del recurso. |
+| `{collection}` | colección del recurso. |
+| `{url}`| dirección web de acceso al título. |
+| `{stock}` | información acerca de la existencias. `{from}` desde qué volumen/número hasta qué volumen/número `{to}`y desde qué fecha (año-mes-día) `{coverage.from}` hasta qué fecha (año-mes-día) `{coverage.to}`. Si la publicación no tiene cierre,  `{to}` y `{coverage.to}` devuelven {null}. |
+| `{embargo}` | informa si la publicación tiene sus números en embargo o no `"n"`. En caso de tenerlo aparecerán el tipo `{type}` para embargos anuales `"y"` o mensuales `"m"`, junto con la cantidad de años o meses `{value}` que dura el embargo. |
