@@ -1,14 +1,14 @@
 # rest-api
 
-Documentación para el uso de la API de los catálogos de la Biblioteca Electrónica de Ciencia y Tecnología
+Documentación para el uso de la API de los catálogos de la Biblioteca Electrónica de Ciencia y Tecnología.
 
 ## Versiones
 
-- v1-beta: 2016-dic. Inicio de la API. Creación y testeo
+- v1-beta: 2016-dic. Inicio de la API. Creación y testeo.
 
 ## Reportar problemas, sugerencias
 
-Contactar a: aapollaro@mincyt.gob.ar
+Contactar a: aapollaro@mincyt.gob.ar.
 
 ## Licencia
 
@@ -18,7 +18,7 @@ El uso de esta API está bajo una Licencia MIT.
 
 Esta API fue diseñada para que las bibliotecas de las instituciones habilitadas puedan consumir los datos de los catálogos de la Biblioteca Electrónica de Ciencia y Tecnología. Los datos fueron relevados, curados y cargados por el equipo de la Biblioteca y se refieren a datos bibliográficos de los títulos (título, ISSN, ISBN, edición, etc.) con sus correspondientes URLs a las plataformas editoriales de acuerdo a la contratación que establece el Ministerio con las editoriales.
 
-La API devuelve resultados en formato JSON. La documentación sobre el esquema de metadatos que devuelve el objeto JSON se encuentra en desarrollo.
+La API devuelve resultados en formato JSON. La documentación sobre el esquema de metadatos que devuelve el objeto JSON se encuentra [aquí](https://github.com/becyt/rest-api/edit/master/api-format.md).
 
 ## Requerimientos para su uso
 
