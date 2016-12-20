@@ -6,7 +6,7 @@ Documentación sobre el formato de salida de la API.
 
 Información del estado de la consulta.
 
-```json
+```
 "message": {
 	"status": "ok",
 	"ip": "200.9.244.16",
@@ -33,7 +33,7 @@ Información del estado de la consulta.
 
 Información que describe cada `{item}`.
 
-```json
+```
 "items": [
 			{
 				"title": "#Tear",
@@ -59,7 +59,7 @@ Información que describe cada `{item}`.
 
 Metadatos para cada título de una publicación periódica.
 
-```json
+```
 "journals": [
 	{
 		"title": {
